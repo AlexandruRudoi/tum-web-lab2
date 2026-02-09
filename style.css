@@ -1,1 +1,140 @@
-/* add your CSS here */
+/* Global Styles */
+:root {
+  --primary-color: #1a73e8;
+  --secondary-color: #34a853;
+  --dark-color: #202124;
+  --light-color: #f8f9fa;
+  --text-color: #5f6368;
+  --border-color: #dadce0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--dark-color);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: var(--primary-color);
+}
+
+.nav-menu .cta-btn {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+}
+
+.nav-menu .cta-btn:hover {
+  background: #1557b0;
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: #fff;
+  color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn-secondary:hover {
+  background: #fff;
+  color: var(--primary-color);
+}
+
