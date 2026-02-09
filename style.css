@@ -241,3 +241,65 @@ section {
   color: var(--text-color);
   line-height: 1.8;
 }
+
+/* Benefits Section */
+.benefits {
+  background: #fff;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.benefit-item {
+  text-align: center;
+  padding: 2rem;
+}
+
+.benefit-item h3 {
+  font-size: 1.3rem;
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+}
+
+.benefit-item p {
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background: var(--light-color);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stars {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-text {
+  color: var(--text-color);
+  font-style: italic;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+  color: var(--dark-color);
+  font-weight: 600;
+}
