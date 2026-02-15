@@ -1,4 +1,4 @@
-# RTS GeoServer Landing Page
+# GeoServer RTS Landing Page
 
 **Course:** Web Development  
 **Author:** Alexandru Rudoi
@@ -11,7 +11,7 @@ Professional landing page for Real Tech Solutions GeoServer - a custom GIS platf
 
 ## Project Overview
 
-RTS GeoServer is a specialized Geographic Information System solution that serves government agencies, real estate companies, agricultural organizations, and logistics providers across Moldova. This landing page showcases the platform's capabilities, features, and client testimonials.
+GeoServer RTS is a specialized Geographic Information System solution that serves government agencies, real estate companies, agricultural organizations, and logistics providers across Moldova. This landing page showcases the platform's capabilities, features, and client testimonials.
 
 ## Screenshots
 
