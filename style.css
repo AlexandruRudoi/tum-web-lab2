@@ -40,11 +40,15 @@ body {
   align-items: center;
 }
 
-.logo h1 {
-  color: var(--primary-color);
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin: 0;
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  display: block;
 }
 
 .nav-menu {
