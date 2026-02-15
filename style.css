@@ -79,7 +79,7 @@ body {
 }
 
 .nav-menu .cta-btn:hover {
-  background: #1557b0;
+  background: var(--secondary-color);
   color: #fff;
 }
 
@@ -399,7 +399,7 @@ section {
 }
 
 .contact-form button:hover {
-  background: #1557b0;
+  background: var(--secondary-color);
 }
 
 /* Footer */
