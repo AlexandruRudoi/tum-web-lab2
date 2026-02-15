@@ -1,11 +1,11 @@
 /* Global Styles */
 :root {
-  --primary-color: #1a73e8;
-  --secondary-color: #34a853;
-  --dark-color: #202124;
-  --light-color: #f8f9fa;
-  --text-color: #5f6368;
-  --border-color: #dadce0;
+  --primary-color: #10b981;
+  --secondary-color: #3b82f6;
+  --dark-color: #1e293b;
+  --light-color: #f8fafc;
+  --text-color: #475569;
+  --border-color: #e2e8f0;
 }
 
 * {
@@ -81,7 +81,7 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #059669 0%, #3b82f6 100%);
   color: #fff;
   padding: 6rem 0;
   text-align: center;
@@ -191,20 +191,22 @@ section {
 .stat {
   text-align: center;
   padding: 1.5rem;
-  background: var(--light-color);
+  background: #fff;
   border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .stat h4 {
   font-size: 2.5rem;
-  color: var(--primary-color);
+  color: #059669;
   margin-bottom: 0.5rem;
   font-weight: 700;
 }
 
 .stat p {
-  color: var(--text-color);
+  color: var(--dark-color);
   font-size: 1rem;
+  font-weight: 500;
 }
 
 /* Services Section */
