@@ -1,7 +1,7 @@
 /* Global Styles */
 :root {
-  --primary-color: #10b981;
-  --secondary-color: #3b82f6;
+  --primary-color: #059669;
+  --secondary-color: #047857;
   --dark-color: #1e293b;
   --light-color: #f8fafc;
   --text-color: #475569;
@@ -85,7 +85,7 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #059669 0%, #3b82f6 100%);
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
   color: #fff;
   padding: 6rem 0;
   text-align: center;
@@ -335,8 +335,25 @@ section {
 
 .contact-details p {
   margin-bottom: 1rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+.contact-details strong {
   color: var(--dark-color);
+  font-weight: 600;
+}
+
+.contact-details a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-details a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
 }
 
 .contact-form h3 {
@@ -424,6 +441,12 @@ section {
 .footer-section ul li {
   margin-bottom: 0.5rem;
   color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-section ul li .icon {
+  color: var(--primary-color);
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
 }
 
 .footer-section ul li a {
