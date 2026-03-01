@@ -1,4 +1,4 @@
-# Lab 2 - Landing page
+# Lab 2 - Landing Page
 
 Create a web page for your/friends/relatives business (example: car-rent, cookies-shop, crypto-scam)
 
