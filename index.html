@@ -8,21 +8,23 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
   </head>
-  <body>
+  <body class="text-muted">
     <!-- Navigation -->
-    <nav class="navbar">
-      <div class="container">
+    <nav class="sticky top-0 z-50 bg-white shadow-sm">
+      <div class="max-w-6xl mx-auto px-5 flex justify-between items-center h-16">
         <div class="logo">
-          <img src="images/logo.png" alt="RTS Logo" />
+          <img src="images/logo.png" alt="RTS Logo" class="h-12 w-auto" />
         </div>
-        <ul class="nav-menu">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#benefits">Why Us</a></li>
-          <li><a href="#testimonials">Reviews</a></li>
-          <li><a href="#contact" class="cta-btn">Get Started</a></li>
+        <ul class="flex gap-8 items-center list-none m-0 p-0">
+          <li><a href="#hero" class="text-dark font-medium hover:text-primary transition-colors no-underline">Home</a></li>
+          <li><a href="#about" class="text-dark font-medium hover:text-primary transition-colors no-underline">About</a></li>
+          <li><a href="#services" class="text-dark font-medium hover:text-primary transition-colors no-underline">Services</a></li>
+          <li><a href="#benefits" class="text-dark font-medium hover:text-primary transition-colors no-underline">Why Us</a></li>
+          <li><a href="#testimonials" class="text-dark font-medium hover:text-primary transition-colors no-underline">Reviews</a></li>
+          <li><a href="#contact" class="bg-primary text-white px-5 py-2 rounded font-medium hover:bg-primary-dark transition-colors no-underline">Get Started</a></li>
         </ul>
       </div>
     </nav>
