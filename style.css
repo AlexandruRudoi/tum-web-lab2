@@ -1,13 +1,4 @@
 /* Global Styles */
-:root {
-  --primary-color: #059669;
-  --secondary-color: #047857;
-  --dark-color: #1e293b;
-  --light-color: #f8fafc;
-  --text-color: #475569;
-  --border-color: #e2e8f0;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -15,13 +6,6 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  color: var(--text-color);
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 /* Navigation */
