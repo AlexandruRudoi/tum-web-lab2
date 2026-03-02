@@ -8,22 +8,82 @@ body {
   line-height: 1.6;
 }
 
+/* Mobile menu checkbox toggle */
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  #menu-toggle:checked~.mobile-menu {
+    display: block;
+  }
+}
+
+/* Mascot tooltip — slides up from mascot */
+.mascot-tooltip {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+}
+
+#mascot:hover .mascot-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mascot-arrow {
+  position: absolute;
+  bottom: -6px;
+  right: 22px;
+  width: 12px;
+  height: 12px;
+  background-color: #1e293b;
+  transform: rotate(45deg);
+  border-radius: 0 0 2px 0;
+}
+
+/* Mascot */
+#mascot {
+  opacity: 0;
+  animation: mascot-appear 0.5s ease forwards 3s;
+}
+
+.mascot-tooltip {
+  position: absolute;
+  z-index: 60;
+}
+
+.mascot-float {
+  animation: mascot-float 3s ease-in-out infinite;
+}
+
+.mascot-pin {
+  cursor: pointer;
+}
+
+/* Mascot animations */
 @keyframes mascot-float {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 @keyframes mascot-appear {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
 
-@keyframes mascot-float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-@keyframes mascot-appear {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
