@@ -1,6 +1,8 @@
 ---
 import { getEntry } from 'astro:content';
-const { data: about } = await getEntry('site', 'about');
+interface Props { lang: string; }
+const { lang } = Astro.props;
+const { data: about } = await getEntry('site', `${lang}/about`);
 ---
 
 <section id="about" class="bg-white py-16">
