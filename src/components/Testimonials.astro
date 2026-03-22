@@ -1,6 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
-const testimonials = await getCollection('testimonials');
+interface Props { lang: string; }
+const { lang } = Astro.props;
+const testimonials = (await getCollection('testimonials')).filter((t) =>
+  t.id.startsWith(`${lang}/`)
+);
 ---
 
 <section id="testimonials" class="bg-slate-50 py-16">

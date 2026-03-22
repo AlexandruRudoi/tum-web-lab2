@@ -17,7 +17,7 @@ body {
   display: none;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   #menu-toggle:checked ~ .mobile-menu {
     display: block;
   }
@@ -59,6 +59,10 @@ body {
 .mascot-float {
   animation: mascot-float 3s ease-in-out infinite;
 }
+
+/* Language switcher */
+.lang-switcher > summary { list-style: none; border: 1px solid #cbd5e1 !important; }
+.lang-switcher > summary::-webkit-details-marker { display: none; }
 
 .mascot-pin {
   cursor: pointer;

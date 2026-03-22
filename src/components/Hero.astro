@@ -1,6 +1,8 @@
 ---
 import { getEntry } from 'astro:content';
-const { data: hero } = await getEntry('site', 'hero');
+interface Props { lang: string; }
+const { lang } = Astro.props;
+const { data: hero } = await getEntry('site', `${lang}/hero`);
 ---
 
 <section id="hero" class="bg-gradient-to-br from-emerald-600 to-emerald-400 text-white py-24 text-center">

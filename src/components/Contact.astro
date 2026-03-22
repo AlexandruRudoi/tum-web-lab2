@@ -1,6 +1,8 @@
 ---
 import { getEntry } from 'astro:content';
-const { data: contact } = await getEntry('site', 'contact');
+interface Props { lang: string; }
+const { lang } = Astro.props;
+const { data: contact } = await getEntry('site', `${lang}/contact`);
 ---
 
 <section id="contact" class="bg-white py-16">

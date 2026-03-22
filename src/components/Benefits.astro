@@ -1,8 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
-const benefits = (await getCollection('benefits')).sort(
-  (a, b) => (a.data.order ?? 99) - (b.data.order ?? 99)
-);
+interface Props { lang: string; }
+const { lang } = Astro.props;
+const benefits = (await getCollection('benefits'))
+  .filter((b) => b.id.startsWith(`${lang}/`))
+  .sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
 ---
 
 <section id="benefits" class="bg-white py-16">
