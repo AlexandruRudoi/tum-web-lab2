@@ -1,0 +1,120 @@
+# ============================================================
+# Decap CMS Configuration – RTS GeoServer
+# ============================================================
+# LOCAL DEV:  Run `npm run cms` alongside `npm run dev`.
+#             The local proxy (port 8081) lets you edit files
+#             without GitHub auth.
+#
+# PRODUCTION: Comment out `local_backend`, set your GitHub
+#             OAuth App Client ID in `app_id` below, and
+#             ensure the callback URL in the OAuth App matches
+#             your deployment URL.
+# ============================================================
+
+# local_backend: true   # local development
+
+backend:
+  name: github
+  repo: AlexandruRudoi/tum-web-lab2
+  branch: master
+  auth_type: pkce
+  app_id: Ov23liGPCHZLJdXchmzF
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  # ----------------------------------------------------------------
+  # Singleton page sections (file collection)
+  # ----------------------------------------------------------------
+  - name: site
+    label: Site Sections
+    files:
+
+      - name: hero
+        label: Hero Section
+        file: src/content/site/hero.json
+        format: json
+        fields:
+          - { name: title,               label: Title,                widget: string }
+          - { name: subtitle,            label: Subtitle,             widget: text   }
+          - { name: cta_text,            label: Primary CTA Text,     widget: string }
+          - { name: cta_link,            label: Primary CTA Link,     widget: string }
+          - { name: cta_secondary_text,  label: Secondary CTA Text,   widget: string }
+          - { name: cta_secondary_link,  label: Secondary CTA Link,   widget: string }
+
+      - name: about
+        label: About Section
+        file: src/content/site/about.json
+        format: json
+        fields:
+          - { name: section_title, label: Section Title,  widget: string }
+          - { name: heading,       label: Heading,        widget: string }
+          - { name: paragraph1,    label: Paragraph 1,    widget: text   }
+          - { name: paragraph2,    label: Paragraph 2,    widget: text   }
+          - { name: stat1_value,   label: Stat 1 – Value, widget: string }
+          - { name: stat1_label,   label: Stat 1 – Label, widget: string }
+          - { name: stat2_value,   label: Stat 2 – Value, widget: string }
+          - { name: stat2_label,   label: Stat 2 – Label, widget: string }
+          - { name: stat3_value,   label: Stat 3 – Value, widget: string }
+          - { name: stat3_label,   label: Stat 3 – Label, widget: string }
+
+      - name: contact
+        label: Contact Section
+        file: src/content/site/contact.json
+        format: json
+        fields:
+          - { name: heading,        label: Heading,           widget: string }
+          - { name: intro,          label: Introduction,      widget: text   }
+          - { name: email,          label: Email,             widget: string }
+          - { name: phone1,         label: Phone 1 (raw),     widget: string }
+          - { name: phone1_display, label: Phone 1 (display), widget: string }
+          - { name: phone2,         label: Phone 2 (raw),     widget: string }
+          - { name: phone2_display, label: Phone 2 (display), widget: string }
+          - { name: address,        label: Address,           widget: string }
+          - { name: address_url,    label: Maps URL,          widget: string }
+          - { name: hours,          label: Business Hours,    widget: string }
+
+  # ----------------------------------------------------------------
+  # Services (folder collection – create / delete supported)
+  # ----------------------------------------------------------------
+  - name: services
+    label: Services
+    folder: src/content/services
+    create: true
+    delete: true
+    format: json
+    slug: "{{slug}}"
+    fields:
+      - { name: title,       label: Title,       widget: string }
+      - { name: description, label: Description, widget: text   }
+      - { name: order,       label: Sort Order,  widget: number, value_type: int, default: 99 }
+
+  # ----------------------------------------------------------------
+  # Benefits (folder collection)
+  # ----------------------------------------------------------------
+  - name: benefits
+    label: Benefits
+    folder: src/content/benefits
+    create: true
+    delete: true
+    format: json
+    slug: "{{slug}}"
+    fields:
+      - { name: title,       label: Title,       widget: string }
+      - { name: description, label: Description, widget: text   }
+      - { name: order,       label: Sort Order,  widget: number, value_type: int, default: 99 }
+
+  # ----------------------------------------------------------------
+  # Testimonials (folder collection)
+  # ----------------------------------------------------------------
+  - name: testimonials
+    label: Testimonials
+    folder: src/content/testimonials
+    create: true
+    delete: true
+    format: json
+    slug: "{{slug}}"
+    fields:
+      - { name: quote,  label: Quote,                widget: text   }
+      - { name: author, label: Author / Organization, widget: string }
