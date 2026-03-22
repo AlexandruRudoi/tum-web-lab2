@@ -1,0 +1,28 @@
+---
+import '../styles/reset.css';
+import '../styles/style.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'GeoServer RTS - Custom GIS Solutions for Moldova',
+  description = 'GeoServer RTS - Professional GIS platform with custom Moldavian layers',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  </head>
+  <body class="text-muted">
+    <slot />
+  </body>
+</html>
