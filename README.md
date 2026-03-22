@@ -7,7 +7,7 @@ Professional landing page for Real Tech Solutions GeoServer - a custom GIS platf
 
 ## Live Demo
 
-[View Live Site](https://alexandrurudoi.github.io/tum-web-lab2/)
+[View Live Site](https://geo.rts.one)
 
 ## Project Overview
 
@@ -16,28 +16,28 @@ GeoServer RTS is a specialized Geographic Information System solution that serve
 ## Screenshots
 
 ### Navigation
-![Navigation](images/sections/header.png)
+![Navigation](https://raw.githubusercontent.com/AlexandruRudoi/tum-web-lab2/master/public/images/sections/header.png)
 
 ### Hero Section
-![Hero](images/sections/hero.png)
+![Hero](https://raw.githubusercontent.com/AlexandruRudoi/tum-web-lab2/master/public/images/sections/hero.png)
 
 ### About Section
-![About](images/sections/about.png)
+![About](https://raw.githubusercontent.com/AlexandruRudoi/tum-web-lab2/master/public/images/sections/about.png)
 
 ### Services Section
-![Services](images/sections/services.png)
+![Services](https://raw.githubusercontent.com/AlexandruRudoi/tum-web-lab2/master/public/images/sections/services.png)
 
 ### Benefits Section
-![Benefits](images/sections/benefits.png)
+![Benefits](https://raw.githubusercontent.com/AlexandruRudoi/tum-web-lab2/master/public/images/sections/benefits.png)
 
 ### Testimonials Section
-![Testimonials](images/sections/testimonials.png)
+![Testimonials](https://raw.githubusercontent.com/AlexandruRudoi/tum-web-lab2/master/public/images/sections/testimonials.png)
 
 ### Contact Section
-![Contact](images/sections/contact.png)
+![Contact](https://raw.githubusercontent.com/AlexandruRudoi/tum-web-lab2/master/public/images/sections/contact.png)
 
 ### Footer
-![Footer](images/sections/footer.png)
+![Footer](https://raw.githubusercontent.com/AlexandruRudoi/tum-web-lab2/master/public/images/sections/footer.png)
 
 ## Technologies Used
 
