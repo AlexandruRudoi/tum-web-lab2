@@ -1,34 +1,20 @@
 ---
+import { getCollection } from 'astro:content';
+const benefits = (await getCollection('benefits')).sort(
+  (a, b) => (a.data.order ?? 99) - (b.data.order ?? 99)
+);
 ---
 
 <section id="benefits" class="bg-white py-16">
   <div class="max-w-6xl mx-auto px-5">
     <h2 class="text-center text-4xl font-bold text-dark mb-12">Why Choose GeoServer RTS?</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-      <div class="text-center p-8">
-        <h3 class="text-xl font-semibold text-dark mb-4">Moldova-Specific Data</h3>
-        <p class="text-muted leading-relaxed">Custom GIS layers tailored specifically for Moldavian regions including Chi&#537;in&#259;u, B&#259;l&#539;i, and other major cities.</p>
-      </div>
-      <div class="text-center p-8">
-        <h3 class="text-xl font-semibold text-dark mb-4">Custom Layer Development</h3>
-        <p class="text-muted leading-relaxed">We create specialized layers based on your business requirements - from infrastructure to demographics.</p>
-      </div>
-      <div class="text-center p-8">
-        <h3 class="text-xl font-semibold text-dark mb-4">Real-Time Data Access</h3>
-        <p class="text-muted leading-relaxed">Access up-to-date geographic information through our API with minimal latency.</p>
-      </div>
-      <div class="text-center p-8">
-        <h3 class="text-xl font-semibold text-dark mb-4">Scalable Infrastructure</h3>
-        <p class="text-muted leading-relaxed">Enterprise-grade hosting that scales with your business needs and user load.</p>
-      </div>
-      <div class="text-center p-8">
-        <h3 class="text-xl font-semibold text-dark mb-4">Comprehensive Documentation</h3>
-        <p class="text-muted leading-relaxed">Detailed API documentation, code examples, and integration guides to get you started quickly.</p>
-      </div>
-      <div class="text-center p-8">
-        <h3 class="text-xl font-semibold text-dark mb-4">Reliable Support</h3>
-        <p class="text-muted leading-relaxed">Technical support from our experienced GIS team during business hours.</p>
-      </div>
+      {benefits.map((benefit) => (
+        <div class="text-center p-8">
+          <h3 class="text-xl font-semibold text-dark mb-4">{benefit.data.title}</h3>
+          <p class="text-muted leading-relaxed">{benefit.data.description}</p>
+        </div>
+      ))}
     </div>
   </div>
 </section>

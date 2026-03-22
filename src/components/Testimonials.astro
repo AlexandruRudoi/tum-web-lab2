@@ -1,25 +1,19 @@
 ---
+import { getCollection } from 'astro:content';
+const testimonials = await getCollection('testimonials');
 ---
 
 <section id="testimonials" class="bg-slate-50 py-16">
   <div class="max-w-6xl mx-auto px-5">
     <h2 class="text-center text-4xl font-bold text-dark mb-12">What Our Clients Say</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="bg-white p-8 rounded-lg shadow-md">
-        <div class="text-xl mb-4">⭐⭐⭐⭐⭐</div>
-        <p class="text-muted italic leading-relaxed mb-6">"GeoServer RTS ofer&#259; date geografice detaliate &#537;i actualizate pentru municipiul B&#259;l&#539;i. Instrumentele de vizualizare ne ajut&#259; s&#259; planific&#259;m dezvoltarea infrastructurii urbane mai eficient."</p>
-        <p class="text-dark font-semibold">- Prim&#259;ria B&#259;l&#539;i</p>
-      </div>
-      <div class="bg-white p-8 rounded-lg shadow-md">
-        <div class="text-xl mb-4">⭐⭐⭐⭐⭐</div>
-        <p class="text-muted italic leading-relaxed mb-6">"Layerele cadastrale &#537;i terenurile din GeoServer RTS sunt esen&#539;iale pentru urbanism &#537;i rela&#539;ii funciare. Integrarea prin API a fost simpl&#259; &#537;i documenta&#539;ia foarte clar&#259;."</p>
-        <p class="text-dark font-semibold">- DGAURF</p>
-      </div>
-      <div class="bg-white p-8 rounded-lg shadow-md">
-        <div class="text-xl mb-4">⭐⭐⭐⭐⭐</div>
-        <p class="text-muted italic leading-relaxed mb-6">"Solu&#539;ia iForest utilizeaz&#259; layerele GeoServer RTS pentru monitorizarea p&#259;durilor, solurilor &#537;i sistemelor de iriga&#539;ie. Date precise despre zonele forestiere &#537;i fazele de plantare."</p>
-        <p class="text-dark font-semibold">- I.P. ONIPM</p>
-      </div>
+      {testimonials.map((t) => (
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <div class="text-xl mb-4">⭐⭐⭐⭐⭐</div>
+          <p class="text-muted italic leading-relaxed mb-6">"{t.data.quote}"</p>
+          <p class="text-dark font-semibold">- {t.data.author}</p>
+        </div>
+      ))}
     </div>
   </div>
 </section>

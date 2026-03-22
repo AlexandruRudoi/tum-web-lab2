@@ -1,16 +1,16 @@
 ---
+import { getEntry } from 'astro:content';
+const { data: hero } = await getEntry('site', 'hero');
 ---
 
 <section id="hero" class="bg-gradient-to-br from-emerald-600 to-emerald-400 text-white py-24 text-center">
   <div class="max-w-6xl mx-auto px-5">
     <div class="max-w-3xl mx-auto">
-      <h2 class="text-3xl md:text-5xl font-bold mb-4">Custom GIS Solutions for Moldova</h2>
-      <p class="text-lg md:text-xl mb-8 text-white/90">
-        Professional GeoServer platform with 70+ custom layers. Empower your business with precise geographic data and mapping tools.
-      </p>
+      <h2 class="text-3xl md:text-5xl font-bold mb-4">{hero.title}</h2>
+      <p class="text-lg md:text-xl mb-8 text-white/90">{hero.subtitle}</p>
       <div class="flex gap-4 justify-center flex-wrap">
-        <a href="#contact" class="bg-white text-primary font-semibold px-8 py-3 rounded hover:-translate-y-0.5 hover:shadow-lg transition-all no-underline">Get Started</a>
-        <a href="#services" class="bg-transparent text-white border-2 border-white font-semibold px-8 py-3 rounded hover:bg-white hover:text-primary transition-all no-underline">Our Solutions</a>
+        <a href={hero.cta_link} class="bg-white text-primary font-semibold px-8 py-3 rounded hover:-translate-y-0.5 hover:shadow-lg transition-all no-underline">{hero.cta_text}</a>
+        <a href={hero.cta_secondary_link} class="bg-transparent text-white border-2 border-white font-semibold px-8 py-3 rounded hover:bg-white hover:text-primary transition-all no-underline">{hero.cta_secondary_text}</a>
       </div>
     </div>
   </div>
