@@ -1,4 +1,6 @@
-tailwind.config = {
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./src/**/*.{astro,html,js,ts}'],
   corePlugins: {
     preflight: false,
   },
@@ -9,7 +11,7 @@ tailwind.config = {
         'primary-dark': '#047857',
         dark: '#1e293b',
         muted: '#475569',
-      }
-    }
-  }
-}
+      },
+    },
+  },
+};

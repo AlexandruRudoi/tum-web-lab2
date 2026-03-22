@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Base Styles */
 * {
   box-sizing: border-box;
@@ -8,19 +12,21 @@ body {
   line-height: 1.6;
 }
 
-/* Mobile menu checkbox toggle */
+/* Mobile menu — CSS-only checkbox toggle */
 .mobile-menu {
   display: none;
 }
 
 @media (max-width: 767px) {
-  #menu-toggle:checked~.mobile-menu {
+  #menu-toggle:checked ~ .mobile-menu {
     display: block;
   }
 }
 
 /* Mascot tooltip — slides up from mascot */
 .mascot-tooltip {
+  position: absolute;
+  z-index: 60;
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
@@ -50,11 +56,6 @@ body {
   animation: mascot-appear 0.5s ease forwards 3s;
 }
 
-.mascot-tooltip {
-  position: absolute;
-  z-index: 60;
-}
-
 .mascot-float {
   animation: mascot-float 3s ease-in-out infinite;
 }
@@ -65,25 +66,11 @@ body {
 
 /* Mascot animations */
 @keyframes mascot-float {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
 }
 
 @keyframes mascot-appear {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
